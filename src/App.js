@@ -1,5 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Recovery from './components/Recovery';
+import Fuel from './components/Fuel';
+import Move from './components/Move';
 
 function App() {
   return (
@@ -7,7 +9,10 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <div>
+            <h1>Welcome to Your Wellness App</h1>
+            {/* Add your components and routes here */}
+          </div>
         </p>
         <a
           className="App-link"
