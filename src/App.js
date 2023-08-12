@@ -2,8 +2,9 @@ import React from 'react';
 import Recovery from './components/Recovery';
 import Fuel from './components/Fuel';
 import Move from './components/Move';
+import Layout from './components/Layout';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 /*import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';*/
@@ -14,24 +15,25 @@ import store from './utils/store';
 function App() {
   return (
       
-      <Router>
+      <BrowserRouter>
         <Provider store = {store}>
           <div className="App">
             <header className="App-header">
-            <h1>Welcome to Your Wellness App</h1>
               <p>
-                <div>
-                  <Route exact path="/Move" component={Move} />
-                  <Route exact path="/Recovery" component={Recovery} />
-                  <Route exact path="/Fuel" component={Fuel} />
-                  {/* Add your components and routes here */}
-                </div>
+                  <div>
+                    <Routes>
+                      <Route path="/" element ={<Layout/>}/>
+                      <Route path="/Move" element={<Move/>} />
+                      <Route path="/Recovery" element={<Recovery/>} />
+                      <Route path="/Fuel" element={<Fuel/>} />
+                      {/* Add your components and routes here */}
+                    </Routes>
+                  </div>
               </p>
-              
             </header>
           </div>
         </Provider>
-      </Router>
+      </BrowserRouter>
   );
 }
 
