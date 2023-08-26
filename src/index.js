@@ -11,14 +11,13 @@ import Move from './Pages/Move';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-         
-                    <Routes>
-                      <Route path="/" element ={<App/>}/>
-                      <Route path="/move" element={<Move/>} />
-                      <Route path="/recovery" element={<Recover/>} />
-                      <Route path="/fuel" element={<Fuel/>} />
-                   
-                    </Routes>
+          <Routes>
+            <Route path="/" element ={<App/>}>
+              <Route path="/move" element={<Move/>} />
+              <Route path="/recover" element={<Recover/>} />
+              <Route path="/fuel" element={<Fuel/>} />
+            </Route> 
+          </Routes>
       </BrowserRouter>
 );
 
