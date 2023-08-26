@@ -1,39 +1,16 @@
 import React from 'react';
-import Recovery from './components/Recovery';
-import Fuel from './components/Fuel';
-import Move from './components/Move';
-import Layout from './components/Layout';
-
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
 
 /*import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';*/
 
-import { Provider } from 'react-redux';
-import store from './utils/store';
 
 function App() {
   return (
+    <div className = "App">
+        <Navbar />
+    </div>
   
-      <BrowserRouter>
-        <Provider store = {store}>
-          <div className="App">
-            <header className="App-header">
-              <p>
-                  <div>
-                    <Routes>
-                      <Route path="/" element ={<Layout/>}/>
-                      <Route path="/Move" element={<Move/>} />
-                      <Route path="/Recovery" element={<Recovery/>} />
-                      <Route path="/Fuel" element={<Fuel/>} />
-                   
-                    </Routes>
-                  </div>
-              </p>
-            </header>
-          </div>
-        </Provider>
-      </BrowserRouter>
   );
 }
 

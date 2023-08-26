@@ -5,24 +5,24 @@ import DoubleArrowTwoToneIcon from '@mui/icons-material/DoubleArrowTwoTone';
 import SyncTwoToneIcon from '@mui/icons-material/SyncTwoTone';
 
 
-export const mainLayoutItems = [
+export const mainNavbarItems = [
     {
         id: 0,
         icon: <SpeedSharpIcon />,
         label: 'Fuel',
-        route: 'route',
+        route: 'fuel',
     },
     {
         id: 1,
         icon: <DoubleArrowTwoToneIcon/>,
         label: 'Move',
-        route: 'route',
+        route: 'move',
     },
     {
         id: 2,
         icon: <SyncTwoToneIcon/>,
         label: 'Recover',
-        route: 'route',
+        route: 'recover',
     },
     
 ]

@@ -8,10 +8,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import { mainLayoutItems } from './layout_items';
+import { mainNavbarItems } from './navbar_items';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const Layout = () => {
     const drawerWidth = 240;
+    const navigate = useNavigate();
   return (
 
     <Drawer
@@ -21,6 +23,7 @@ const Layout = () => {
       '& .MuiDrawer-paper': {
         width: drawerWidth,
         boxSizing: 'border-box',
+        backgroundColor: '#021f52',
       },
     }}
     variant="permanent"
@@ -29,19 +32,22 @@ const Layout = () => {
     <Toolbar />
     <Divider />
     <List>
-      {mainLayoutItems.map((text, index) => (
-        <ListItem key={text.id} disablePadding>
+      {mainNavbarItems.map((item, index) => (
+        <ListItem 
+            key={item.id} 
+            disablePaddings
+            onClick={()=> navigate(item.route)}
+            >
           <ListItemButton>
-            <ListItemIcon>
-              {text.icon}
+            <ListItemIcon sx={{color: '#f5f6f7',}}>
+              {item.icon}
             </ListItemIcon>
-            <ListItemText primary={text.label} />
+            <ListItemText sx={{color:'#f5f6f7',}}primary={item.label} />
           </ListItemButton>
         </ListItem>
 
       ))}
     </List>
-    <Divider />
   </Drawer>
    
   );
