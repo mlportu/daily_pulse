@@ -14,7 +14,7 @@ import store from './utils/store';
 
 function App() {
   return (
-      
+  
       <BrowserRouter>
         <Provider store = {store}>
           <div className="App">
@@ -26,7 +26,7 @@ function App() {
                       <Route path="/Move" element={<Move/>} />
                       <Route path="/Recovery" element={<Recovery/>} />
                       <Route path="/Fuel" element={<Fuel/>} />
-                      {/* Add your components and routes here */}
+                   
                     </Routes>
                   </div>
               </p>
