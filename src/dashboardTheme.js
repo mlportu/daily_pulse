@@ -7,15 +7,30 @@ export const dashboardTheme = createTheme({
           styleOverrides: {
             // Name of the slot
             root: {
-              // Some CSS
               fontSize: '1rem',
+              fontWeight: 600,
+              borderRadius: 0.5,
+              '&.MuiButtom-contained':{
+                backgroundColor: '#009be5',
+                '& :hover': {
+                  backgroundColor: '#006db3'
+                },
+              },
+              '&.MuiButton-outlined':{
+                color: '#fff',
+                boarderColor: '#fff',
+                '&:hover':{
+                  backgroundColor:'transparent'
+                },
+              },
             },
           },
         },
       },
-      palette: {
+      /*palette: {
         primary:{
-            main: ' '
+            main: ""
+          
         }
-      }
+      }*/
     });
