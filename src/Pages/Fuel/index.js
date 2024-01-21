@@ -22,8 +22,11 @@ const Fuel = () => {
          >
         Test Button
       </CommonButton>
-      <NotificationBell iconColor="primary" badgeContent={0}/>
-
+      <NotificationBell 
+          iconColor="primary" 
+          badgeContent={2}
+          />
+    
       {/* Add your fuel-related content and functionality here */}
     </Grid>
   );
