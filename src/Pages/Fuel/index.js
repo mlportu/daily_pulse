@@ -1,6 +1,5 @@
 // src/components/Fuel.js
-import React from 'react';
-import Grid from '@mui/material/Grid';
+import React, {useState} from 'react';
 import BasicCard from '../../components/Common/BasicCard/BasicCard';
 import SearchBar from '../../components/Common/SearchBar/SearchBar';
 import IconButton from '@mui/material/IconButton';
@@ -8,14 +7,20 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 import CommonButton from '../../components/Common/CommonButton/CommonButton';
 import Box from '@mui/material/Box';
 import Typography  from '@mui/material/Typography';
+import GridWrapper from '../../components/Common/GridWrapper/GridWrapper';
+import BasicModal from '../../components/Common/BasicModal/BasicModal';
+
 
 const Fuel = () => {
+  const [open, setOpen] = useState(false);
+
   const getHeader = () => {
     const handleChange = (value) => {
       console.log(value); 
     };
 
     const addUser = () => {
+      setOpen(true)
       console.log('Add User Click')
     };
 
@@ -44,9 +49,9 @@ const Fuel = () => {
           />
           <Box>
               <CommonButton
-                  variant='contained'
-                  onClick={addUser}
-                  size="large"
+                  variant="contained"
+                  onClick = {addUser}
+                  size= "large"
                   sx={headerStyles.addUserButton}
               >
                 Add User
@@ -69,11 +74,12 @@ const Fuel = () => {
   );
 
   return (
-    <Grid item xs={12} sx={{ marginLeft:'240px', backgroundColor: '#eaeff1', padding: '48px 32px', minHeight:'calc(100vh -166px', position:'relative'}} >
-      <BasicCard 
+    <GridWrapper>
+         <BasicCard 
           header ={getHeader()}
           content = {getContent()}/>
-    </Grid>
+          <BasicModal open={open} onClose={()=>setOpen(false)}/>
+    </GridWrapper> 
   );
 };
 
