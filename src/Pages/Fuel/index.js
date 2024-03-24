@@ -8,7 +8,7 @@ import CommonButton from '../../components/Common/CommonButton/CommonButton';
 import Box from '@mui/material/Box';
 import Typography  from '@mui/material/Typography';
 import GridWrapper from '../../components/Common/GridWrapper/GridWrapper';
-import BasicModal from '../../components/Common/BasicModal/BasicModal';
+import NewUserModal from '../../components/Modals/NewUserModal';
 
 
 const Fuel = () => {
@@ -78,7 +78,7 @@ const Fuel = () => {
          <BasicCard 
           header ={getHeader()}
           content = {getContent()}/>
-          <BasicModal open={open} onClose={()=>setOpen(false)}/>
+          <NewUserModal open={open} onClose={()=>setOpen(false)}/>
     </GridWrapper> 
   );
 };

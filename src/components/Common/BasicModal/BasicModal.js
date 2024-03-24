@@ -6,13 +6,8 @@ import Input from '@mui/material/Input';
 import CommonButton from '../CommonButton/CommonButton';
 import { modalStyles } from './styles';
 
-const BasicModal = ({open, onClose}) => {
-    const validate = () => {
-
-    }
+const BasicModal = ({open, onClose, title, subTitle, content, validate}) => {
     
-
-
     return (
         <Modal open={open} onClose={onClose}>
             <Box sx={modalStyles.wrapper}>
@@ -20,20 +15,15 @@ const BasicModal = ({open, onClose}) => {
                     variant="h6" 
                     component="h2"
                 >
-                    New User
-                    {/*{title}*/}
+                    {title}
                 </Typography>
                 <Typography 
                     sx={{ mt: 2 }}
                     >
-                       {/*{subtitle}*/}
-                     Fill out inputs and hit 'submit'
+                       {subTitle}
                 </Typography>
-                <Box sx={modalStyles.inputFields}>
-                    <Input placeholder ="E-mail"/>
-                    <Input placeholder ="Phone Number"/>
-                    <Input placeholder = "User ID"/>
-                </Box>
+                {content}
+                
                 <Box sx={modalStyles.buttons}>
                     <CommonButton
                         variant ="contained"
