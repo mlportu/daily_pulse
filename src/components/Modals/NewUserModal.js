@@ -20,9 +20,13 @@ const newUserModal = ({open, onClose}) => {
 
     const getContent = () => (
         <Box sx={modalStyles.inputFields}>
-           <Input placeholder="E-mail"/>
-           <Input placeholder="Phone number"/>
-           <Input placeholder="User id"/>
+           
+           <TextField
+                placeholder='User ID'
+                name="userId"
+                label="User ID"
+                required
+           />
         </Box>
     );
 
