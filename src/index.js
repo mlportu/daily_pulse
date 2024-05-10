@@ -8,10 +8,11 @@ import Recover from './Pages/Recover';
 import Fuel from './Pages/Fuel';
 import Move from './Pages/Move';
 import { ThemeProvider } from '@mui/material/styles'
+import { dashboardTheme } from './dashboardTheme';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  //<ThemeProvider>
+  <ThemeProvider theme = {dashboardTheme}>
   <BrowserRouter>
           <Routes>
             <Route path="/" element ={<App/>}>
@@ -21,7 +22,7 @@ root.render(
             </Route> 
           </Routes>
       </BrowserRouter>
-  //</ThemeProvider>
+  </ThemeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
