@@ -5,4 +5,4 @@ node_modules
 
 .pnp.js
 
-.env
+server/.env
