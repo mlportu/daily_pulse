@@ -12,7 +12,7 @@ import { mainNavbarItems } from './navbar_items';
 import { useParams, useNavigate } from 'react-router-dom';
 
 const Layout = () => {
-    const drawerWidth = 240;
+    const drawerWidth = 230;
     const navigate = useNavigate();
   return (
 
