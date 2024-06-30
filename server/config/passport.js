@@ -22,13 +22,14 @@ passport.use(new GoogleStrategy({
     let user = await User.findOne({ googleId: profile.id });
 
     if (user) {
-      done(null, user);
+      return done(null, user);
     } else {
       user = await User.create(newUser);
-      done(null, user);
+      return done(null, user);
     }
   } catch (err) {
     console.error(err);
+    return done(err,null);
   }
 }));
 
@@ -50,14 +51,14 @@ passport.use(new WhoopStrategy({
     let user = await User.findOne({ whoopId: profile.id });
 
     if (user) {
-      done(null, user);
+      return done(null, user);
     } else {
       user = await User.create(newUser);
-      done(null, user);
+      return done(null, user);
     }
   } catch (err) {
     console.error(err);
-    done(err, null);
+    return done(err, null);
   }
 }));
 
@@ -67,7 +68,7 @@ passport.serializeUser((user, done) => {
 
 passport.deserializeUser(async (id, done) => {
   try {
-    const user = await User.findById(id);
+    const user = await User.findById(id).exec();
     done(null, user);
   } catch (err) {
     done(err, null);
