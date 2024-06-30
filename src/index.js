@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from './Pages/Login';
+import Dashboard from './components/Dashboard';
 import Recover from './Pages/Recover';
 import Fuel from './Pages/Fuel';
 import Move from './Pages/Move';
@@ -13,9 +15,11 @@ import { dashboardTheme } from './dashboardTheme';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme = {dashboardTheme}>
-  <BrowserRouter>
+      <BrowserRouter>
           <Routes>
             <Route path="/" element ={<App/>}>
+              <Route path="/login" element={<Login/>}/>
+              <Route path="/dashboard" element={<Dashboard/>}/>
               <Route path="/move" element={<Move/>} />
               <Route path="/recover" element={<Recover/>} />
               <Route path="/fuel" element={<Fuel/>} />

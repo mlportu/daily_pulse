@@ -1,5 +1,5 @@
 // src/components/Fuel.js
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import BasicCard from '../../components/Common/BasicCard/BasicCard';
 import SearchBar from '../../components/Common/SearchBar/SearchBar';
 import IconButton from '@mui/material/IconButton';
@@ -9,6 +9,9 @@ import Box from '@mui/material/Box';
 import Typography  from '@mui/material/Typography';
 import GridWrapper from '../../components/Common/GridWrapper/GridWrapper';
 import NewUserModal from '../../components/Modals/NewUserModal';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 
 
 const Fuel = () => {
