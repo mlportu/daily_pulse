@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Recover from './Pages/Recover';
 import Fuel from './Pages/Fuel';
 import Move from './Pages/Move';
+import Connect from './Pages/Connect';
 import { ThemeProvider } from '@mui/material/styles'
 import { dashboardTheme } from './dashboardTheme';
 
@@ -16,6 +17,7 @@ root.render(
   <BrowserRouter>
           <Routes>
             <Route path="/" element ={<App/>}>
+              <Route path="/connect" element={<Connect/>}/>
               <Route path="/move" element={<Move/>} />
               <Route path="/recover" element={<Recover/>} />
               <Route path="/fuel" element={<Fuel/>} />
