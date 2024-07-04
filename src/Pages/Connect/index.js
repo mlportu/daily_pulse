@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { ImageList, ImageListItem,ImageListItemBar, ListItemIcon, ThemeProvider} from '@mui/material';
+import { ImageList, ImageListItem,ImageListItemBar, ListItemIcon, ThemeProvider, Typography} from '@mui/material';
 import SpeedSharpIcon from '@mui/icons-material/SpeedSharp';
 import DirectionsRunTwoToneIcon from '@mui/icons-material/DirectionsRunTwoTone';
 import SyncTwoToneIcon from '@mui/icons-material/SyncTwoTone';
@@ -15,20 +15,24 @@ const Connect = () => {
         theme={{
         palette: {
             primary: {
-            main: '#007FFF',
-            dark: '#0066CC',
+            main: '#000000',
+            dark: '#404040',
             },
+            text:{
+                primary: "#68FF00"
+              }
         },
         }}
     >
     <Box sx={{ flexGrow: 1, m:2 }}>
         <Box sx={{boarderRadius: 1, m:3}}>
             <Box sx={{ width: 1, m:2 }}>
-                <Box 
+                <Typography 
                     sx={{bgcolor: 'primary.main', 
                         '&:hover': {
                             bgcolor: 'primary.dark',
                         },
+                        
                         fontWeight: 'bold',
                         fontSize: 26,
                         textAlign: 'center',
@@ -36,7 +40,7 @@ const Connect = () => {
                 >
                     <SyncTwoToneIcon/>
                     Fuel
-                </Box>
+                </Typography>
             </Box>
             <Box sx={{ width: 1, m:2 }}>
                 <Grid  display='flex' container spacing={2}>
