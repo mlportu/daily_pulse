@@ -4,7 +4,10 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { ImageList, ImageListItem,ImageListItemBar } from '@mui/material';
+import { ImageList, ImageListItem,ImageListItemBar, ListItemIcon} from '@mui/material';
+import SpeedSharpIcon from '@mui/icons-material/SpeedSharp';
+import DirectionsRunTwoToneIcon from '@mui/icons-material/DirectionsRunTwoTone';
+import SyncTwoToneIcon from '@mui/icons-material/SyncTwoTone';
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -21,13 +24,14 @@ const Connect = () => {
     <Box sx={{ flexGrow: 1, m:2 }}>
         <Box sx={{boarderRadius: 1, m:3}}>
             <Box sx={{ width: 1, m:2 }}>
-                <Grid>
-                    <Item>Fuel</Item>
-                </Grid>
+                <Item>
+                    <SyncTwoToneIcon/>
+                    Fuel
+                </Item>
             </Box>
             <Box sx={{ width: 1, m:2 }}>
-                <Grid container spacing={2}>
-                    <Grid item xs={6} md={3}>
+                <Grid  display='flex' container spacing={2}>
+                    <Grid  item xs={6} md={3}>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -39,7 +43,7 @@ const Connect = () => {
                         </ImageList>
                     </Grid>
                     <Grid item xs={6} md={3}>
-                        <ImageList sx={{ width: 1 }}>
+                        <ImageList  sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
                                         srcSet='https://assets.leads-iq.com/assets/img/cmdea0e1f4a-f5de-4ee3-b0f7-e0db6857db2c.png'
@@ -76,13 +80,14 @@ const Connect = () => {
         </Box>
         <Box sx={{boarderRadius: 1, m:2}}>
             <Box sx={{ width: 1, m:2 }}>
-                <Grid>
-                    <Item>Move</Item>
-                </Grid>
+                <Item>
+                    <DirectionsRunTwoToneIcon/>
+                    Move
+                </Item>
             </Box>
             <Box sx={{ width: 1, m:2 }}>
                 <Grid container spacing={2}>    
-                    <Grid item xs={6} md={3}>
+                    <Grid item xs={6} md={4}>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -93,7 +98,7 @@ const Connect = () => {
                                 </ImageListItem>
                         </ImageList>
                     </Grid>
-                    <Grid item xs={6} md={3}>
+                    <Grid item xs={6} md={4}>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -104,7 +109,7 @@ const Connect = () => {
                                 </ImageListItem>
                         </ImageList>
                     </Grid>
-                    <Grid item xs={6} md={3}>
+                    <Grid item xs={6} md={4}>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -115,7 +120,7 @@ const Connect = () => {
                                 </ImageListItem>
                         </ImageList>
                     </Grid>
-                    <Grid item xs={6} md={3}>
+                    <Grid item xs={6} md={4}>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -126,7 +131,7 @@ const Connect = () => {
                                 </ImageListItem>
                         </ImageList>
                     </Grid>
-                    <Grid item xs={6} md={3}>
+                    <Grid item xs={6} md={4}>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -142,13 +147,14 @@ const Connect = () => {
         </Box>
         <Box sx={{boarderRadius: 1, m:2}}>
              <Box sx={{ width: 1, m:2 }}>
-                <Grid>
-                    <Item>Recover</Item>
-                </Grid>
+                <Item>
+                    <SpeedSharpIcon/>
+                    Recover
+                </Item>
             </Box>
             <Box sx={{ width: 1, m:2 }}>
                 <Grid container spacing={2}>    
-                    <Grid item xs={6} md={4}>
+                    <Grid item xs={6} md={3}>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -159,7 +165,7 @@ const Connect = () => {
                                 </ImageListItem>
                         </ImageList>
                     </Grid>
-                    <Grid item xs={6} md={4}>
+                    <Grid item xs={6} md={3}>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -170,7 +176,7 @@ const Connect = () => {
                                 </ImageListItem>
                         </ImageList>
                     </Grid>
-                    <Grid item xs={6} md={4}>
+                    <Grid item xs={6} md={3}>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -181,7 +187,7 @@ const Connect = () => {
                                 </ImageListItem>
                         </ImageList>
                     </Grid>
-                    <Grid item xs={6} md={4}>
+                    <Grid item xs={6} md={3}>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
