@@ -4,30 +4,39 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import { ImageList, ImageListItem,ImageListItemBar, ListItemIcon} from '@mui/material';
+import { ImageList, ImageListItem,ImageListItemBar, ListItemIcon, ThemeProvider} from '@mui/material';
 import SpeedSharpIcon from '@mui/icons-material/SpeedSharp';
 import DirectionsRunTwoToneIcon from '@mui/icons-material/DirectionsRunTwoTone';
 import SyncTwoToneIcon from '@mui/icons-material/SyncTwoTone';
 
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
-
-
 const Connect = () => {
   return (
+    <ThemeProvider
+        theme={{
+        palette: {
+            primary: {
+            main: '#007FFF',
+            dark: '#0066CC',
+            },
+        },
+        }}
+    >
     <Box sx={{ flexGrow: 1, m:2 }}>
         <Box sx={{boarderRadius: 1, m:3}}>
             <Box sx={{ width: 1, m:2 }}>
-                <Item>
+                <Box 
+                    sx={{bgcolor: 'primary.main', 
+                        '&:hover': {
+                            bgcolor: 'primary.dark',
+                        },
+                        fontWeight: 'bold',
+                        fontSize: 26,
+                        textAlign: 'center',
+                    }}
+                >
                     <SyncTwoToneIcon/>
                     Fuel
-                </Item>
+                </Box>
             </Box>
             <Box sx={{ width: 1, m:2 }}>
                 <Grid  display='flex' container spacing={2}>
@@ -43,7 +52,7 @@ const Connect = () => {
                         </ImageList>
                     </Grid>
                     <Grid item xs={6} md={3}>
-                        <ImageList  sx={{ width: 1 }}>
+                        <ImageList  sx={{ width: 1, textAlign: 'center' }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
                                         srcSet='https://assets.leads-iq.com/assets/img/cmdea0e1f4a-f5de-4ee3-b0f7-e0db6857db2c.png'
@@ -54,7 +63,7 @@ const Connect = () => {
                         </ImageList>
                     </Grid>
                     <Grid item xs={6} md={3}>
-                        <ImageList sx={{ width: 1 }}>
+                        <ImageList sx={{ width: 1, textAlign: 'center' }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
                                         srcSet='https://i.pcmag.com/imagery/reviews/02QLfUYNhLSOZYYjHQ8jLQQ-7..v1635288397.png'
@@ -65,8 +74,8 @@ const Connect = () => {
                         </ImageList>
                     </Grid>
                     <Grid item xs={6} md={3}>
-                        <ImageList sx={{ width: 1 }}>
-                                <ImageListItem item xs={6} md={4}>
+                        <ImageList sx={{ width: 1,  }}>
+                                <ImageListItem item xs={6} md={4} textAlign='center'>
                                     <img
                                         srcSet='https://images.squarespace-cdn.com/content/v1/5d97716aeb25db6ebdc07f9f/1580686095119-IR2C8YAJMCU4JYYFZRSV/hellofresh-hlogo-MatthewPeters.png'
                                         src='https://images.squarespace-cdn.com/content/v1/5d97716aeb25db6ebdc07f9f/1580686095119-IR2C8YAJMCU4JYYFZRSV/hellofresh-hlogo-MatthewPeters.png'
@@ -80,10 +89,10 @@ const Connect = () => {
         </Box>
         <Box sx={{boarderRadius: 1, m:2}}>
             <Box sx={{ width: 1, m:2 }}>
-                <Item>
+                <Box>
                     <DirectionsRunTwoToneIcon/>
                     Move
-                </Item>
+                </Box>
             </Box>
             <Box sx={{ width: 1, m:2 }}>
                 <Grid container spacing={2}>    
@@ -147,10 +156,10 @@ const Connect = () => {
         </Box>
         <Box sx={{boarderRadius: 1, m:2}}>
              <Box sx={{ width: 1, m:2 }}>
-                <Item>
+                <Box>
                     <SpeedSharpIcon/>
                     Recover
-                </Item>
+                </Box>
             </Box>
             <Box sx={{ width: 1, m:2 }}>
                 <Grid container spacing={2}>    
@@ -204,7 +213,7 @@ const Connect = () => {
         </Box>
     </Box>
 
- 
+    </ThemeProvider>
   );
 };
 
