@@ -19,10 +19,12 @@ function App() {
     setTitle(parsedTitle);
   },[location]);
 
+
+  
   return (
     <Grid container>
-        <Navbar />
         <Header title={title} />
+   
         <Outlet />
     </Grid>
   
