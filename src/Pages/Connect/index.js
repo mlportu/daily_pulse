@@ -28,7 +28,6 @@ const Connect = () => {
             <Box sx={{ width: 1, m:2 }}>
                 <Grid container spacing={2}>
                     <Grid item xs={6} md={3}>
-                        <Item>Kroger</Item>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -40,7 +39,6 @@ const Connect = () => {
                         </ImageList>
                     </Grid>
                     <Grid item xs={6} md={3}>
-                        <Item>Factor</Item>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -52,7 +50,6 @@ const Connect = () => {
                         </ImageList>
                     </Grid>
                     <Grid item xs={6} md={3}>
-                        <Item>Trifecta</Item>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -64,7 +61,6 @@ const Connect = () => {
                         </ImageList>
                     </Grid>
                     <Grid item xs={6} md={3}>
-                        <Item>Hello Fresh</Item>
                         <ImageList sx={{ width: 1 }}>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
@@ -86,14 +82,60 @@ const Connect = () => {
             </Box>
             <Box sx={{ width: 1, m:2 }}>
                 <Grid container spacing={2}>    
-                    <Grid item xs={6} md={4}>
-                        <Item>Whoop</Item>
+                    <Grid item xs={6} md={3}>
+                        <ImageList sx={{ width: 1 }}>
+                                <ImageListItem item xs={6} md={4}>
+                                    <img
+                                        srcSet='https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/5/AmazonStores/ATVPDKIKX0DER/f0873b00db48ac8dab1e74822d4314ee.w1500.h400.png'
+                                        src='https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/5/AmazonStores/ATVPDKIKX0DER/f0873b00db48ac8dab1e74822d4314ee.w1500.h400.png'
+                                        alt="Whoop"
+                                    />
+                                </ImageListItem>
+                        </ImageList>
                     </Grid>
-                    <Grid item xs={6} md={4}>
-                        <Item>Apple Watch</Item>
+                    <Grid item xs={6} md={3}>
+                        <ImageList sx={{ width: 1 }}>
+                                <ImageListItem item xs={6} md={4}>
+                                    <img
+                                        srcSet='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Apple_Watch_official_logo.svg/2560px-Apple_Watch_official_logo.svg.png'
+                                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Apple_Watch_official_logo.svg/2560px-Apple_Watch_official_logo.svg.png'
+                                        alt="Apple Watch"
+                                    />
+                                </ImageListItem>
+                        </ImageList>
                     </Grid>
-                    <Grid item xs={6} md={4}>
-                        <Item>Aura Ring</Item>
+                    <Grid item xs={6} md={3}>
+                        <ImageList sx={{ width: 1 }}>
+                                <ImageListItem item xs={6} md={4}>
+                                    <img
+                                        srcSet='https://seeklogo.com/images/Q/qura-ring-logo-D4FFD69DBC-seeklogo.com.png'
+                                        src='https://seeklogo.com/images/Q/qura-ring-logo-D4FFD69DBC-seeklogo.com.png'
+                                        alt="Oura Ring"
+                                    />
+                                </ImageListItem>
+                        </ImageList>
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <ImageList sx={{ width: 1 }}>
+                                <ImageListItem item xs={6} md={4}>
+                                    <img
+                                        srcSet='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Fitbit_logo.svg/2560px-Fitbit_logo.svg.png'
+                                        src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Fitbit_logo.svg/2560px-Fitbit_logo.svg.png'
+                                        alt="Fitbit"
+                                    />
+                                </ImageListItem>
+                        </ImageList>
+                    </Grid>
+                    <Grid item xs={6} md={3}>
+                        <ImageList sx={{ width: 1 }}>
+                                <ImageListItem item xs={6} md={4}>
+                                    <img
+                                        srcSet='https://upload.wikimedia.org/wikipedia/commons/8/8e/IFIT_Health_%26_Fitness_logo.jpg'
+                                        src='https://upload.wikimedia.org/wikipedia/commons/8/8e/IFIT_Health_%26_Fitness_logo.jpg'
+                                        alt="iFit"
+                                    />
+                                </ImageListItem>
+                        </ImageList>
                     </Grid>
                 </Grid>
             </Box>
@@ -107,14 +149,50 @@ const Connect = () => {
             <Box sx={{ width: 1, m:2 }}>
                 <Grid container spacing={2}>    
                     <Grid item xs={6} md={4}>
-                        <Item>Whoop</Item>
+                        <ImageList sx={{ width: 1 }}>
+                                <ImageListItem item xs={6} md={4}>
+                                    <img
+                                        srcSet='https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/5/AmazonStores/ATVPDKIKX0DER/f0873b00db48ac8dab1e74822d4314ee.w1500.h400.png'
+                                        src='https://m.media-amazon.com/images/S/stores-image-uploads-na-prod/5/AmazonStores/ATVPDKIKX0DER/f0873b00db48ac8dab1e74822d4314ee.w1500.h400.png'
+                                        alt="Whoop"
+                                    />
+                                </ImageListItem>
+                        </ImageList>
                     </Grid>
                     <Grid item xs={6} md={4}>
-                        <Item>Pliability</Item>
+                        <ImageList sx={{ width: 1 }}>
+                                <ImageListItem item xs={6} md={4}>
+                                    <img
+                                        srcSet='https://bedtimesmagazine.com/wp-content/uploads/2023/05/Sleep_Number-Logo.wine_-1.png'
+                                        src='https://bedtimesmagazine.com/wp-content/uploads/2023/05/Sleep_Number-Logo.wine_-1.png'
+                                        alt="Sleep Number"
+                                    />
+                                </ImageListItem>
+                        </ImageList>
                     </Grid>
                     <Grid item xs={6} md={4}>
-                        <Item>Smart Bed</Item>
+                        <ImageList sx={{ width: 1 }}>
+                                <ImageListItem item xs={6} md={4}>
+                                    <img
+                                        srcSet='https://img.coupert.com/ccsimg/8fd6211e7d07ec2aa73aef615d44c8c3.webp'
+                                        src='https://img.coupert.com/ccsimg/8fd6211e7d07ec2aa73aef615d44c8c3.webp'
+                                        alt="Yoga Body"
+                                    />
+                                </ImageListItem>
+                        </ImageList>
                     </Grid>
+                    <Grid item xs={6} md={4}>
+                        <ImageList sx={{ width: 1 }}>
+                                <ImageListItem item xs={6} md={4}>
+                                    <img
+                                        srcSet='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfNxR0wonS2mwXvj7EVYrAppoiUUo7DkYndg&s'
+                                        src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfNxR0wonS2mwXvj7EVYrAppoiUUo7DkYndg&s'
+                                        alt="Pliability"
+                                    />
+                                </ImageListItem>
+                        </ImageList>
+                    </Grid>
+                    
                 </Grid>
             </Box>
         </Box>
