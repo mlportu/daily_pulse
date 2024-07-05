@@ -9,43 +9,44 @@ import SpeedSharpIcon from '@mui/icons-material/SpeedSharp';
 import DirectionsRunTwoToneIcon from '@mui/icons-material/DirectionsRunTwoTone';
 import SyncTwoToneIcon from '@mui/icons-material/SyncTwoTone';
 
+
 const Connect = () => {
-  return (
-    <ThemeProvider
-        theme={{
-        palette: {
-            primary: {
-            main: '#000000',
-            dark: '#404040',
-            },
-            text:{
-                primary: "#68FF00"
-              }
+
+    const connectStyles = {
+        wrapper: {
+            width:'100%',
+            display: 'flex', 
+            flexDirection: 'column',
+            padding: '20px',
+            backgroundColor: '#000000',
         },
-        }}
-    >
-    <Box sx={{ flexGrow: 1, m:2 }}>
-        <Box sx={{boarderRadius: 1, m:3}}>
-            <Box sx={{ width: 1, m:2 }}>
-                <Typography 
-                    sx={{bgcolor: 'primary.main', 
-                        '&:hover': {
-                            bgcolor: 'primary.dark',
-                        },
-                        
-                        fontWeight: 'bold',
-                        fontSize: 26,
-                        textAlign: 'center',
-                    }}
-                >
-                    <SyncTwoToneIcon/>
-                    Fuel
-                </Typography>
+        header: {
+            width: '100%',
+            backgroundColor:'#000000',
+            display:'flex',
+            alignItems:'center',
+            color:'#20FF02',
+            justifyContent: 'center',
+        },
+       connectionItem: {
+            backgroundColor:'#878887',
+            display:'flex',
+            alignItems:'center',
+            justifyContent: 'center',
+       },
+    };
+
+  return (
+    <Box>
+        <Box>
+            <Box sx={connectStyles.header}>
+                 <SyncTwoToneIcon/>
+                Fuel
             </Box>
-            <Box sx={{ width: 1, m:2 }}>
-                <Grid  display='flex' container spacing={2}>
+            <Box>
+                <Grid  sx={connectStyles.connectionItem} container spacing={2}>
                     <Grid  item xs={6} md={3}>
-                        <ImageList sx={{ width: 1 }}>
+                        <ImageList>
                                 <ImageListItem item xs={6} md={4}>
                                     <img
                                         srcSet='https://1000logos.net/wp-content/uploads/2017/08/Logo-Kroger.png'
@@ -211,13 +212,10 @@ const Connect = () => {
                                 </ImageListItem>
                         </ImageList>
                     </Grid>
-                    
                 </Grid>
             </Box>
         </Box>
     </Box>
-
-    </ThemeProvider>
   );
 };
 
