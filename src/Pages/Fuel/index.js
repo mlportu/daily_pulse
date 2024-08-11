@@ -1,19 +1,19 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Container, Grid, Paper, Button, Link, Card, CardMedia, CardContent, Box } from '@mui/material';
 import { styled } from '@mui/system';
-import activHeroImg from '../../assets/images/Activ_image_Span.jpg';
+import activHeroImg from '../../assets/images/Activ_Post.png';
 
 // Custom styles using styled from @mui/system
 
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   marginBottom: theme.spacing(4),
-  backgroundColor: '#2E7D32', // Earthy green tone
+  backgroundColor: '#68E6DF', // Earthy green tone
 }));
 
 const HeroImage = styled('div')({
-  height: 500,
-  backgroundSize: 'cover',
+  height: 400,
+  backgroundSize: 'contain',
   backgroundPosition: 'center',
 });
 
@@ -38,7 +38,7 @@ const CardContentStyled = styled(CardContent)(({ theme }) => ({
 const Footer = styled('footer')(({ theme }) => ({
   marginTop: theme.spacing(4),
   padding: theme.spacing(2),
-  backgroundColor: '#2E7D32', // Earthy green tone
+  backgroundColor: '#25BCD5', // Earthy green tone
   color: 'white',
 }));
 
@@ -56,8 +56,11 @@ const Fuel = () => {
         style={{ backgroundImage: `url(${activHeroImg})` }}
       >
         <Container>
-          <Typography variant="h3" align="center" style={{ color: 'white', paddingTop: '150px' }}>
+          <Typography variant="h3" align="left" style={{ color: 'white', paddingTop: '150px' }}>
             ActivCare
+          </Typography>
+          <Typography variant="h4" align="left" style={{ color: 'white', paddingTop: '50px' }}>
+            Aggregate your health and wellness information into a single location to promote an intentionl and active approach to your being your best self
           </Typography>
         </Container>
       </HeroImage>
