@@ -22,12 +22,9 @@ function App() {
 
   
   return (
-    <Grid container>
-        <Header title={title} />
-   
-        <Outlet />
-    </Grid>
-  
+    <Outlet />
+
+
   );
 }
 

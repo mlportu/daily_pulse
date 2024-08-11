@@ -1,15 +1,18 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Container, Grid, Paper, Button, Link, Card, CardMedia, CardContent, Box } from '@mui/material';
 import { styled } from '@mui/system';
+import activHeroImg from '../../assets/images/Activ_image_Span.jpg';
 
 // Custom styles using styled from @mui/system
+
+
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   marginBottom: theme.spacing(4),
   backgroundColor: '#2E7D32', // Earthy green tone
 }));
 
 const HeroImage = styled('div')({
-  height: 400,
+  height: 500,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
 });
@@ -42,22 +45,25 @@ const Footer = styled('footer')(({ theme }) => ({
 const Fuel = () => {
   return (
     <div>
+{/*Navigation*/}
       <StyledAppBar position="static">
         <Toolbar>
-          <Typography variant="h6">Fuel and Food</Typography>
+          <Typography variant="h6">ActivCare</Typography>
         </Toolbar>
       </StyledAppBar>
-
+{/*Hero - Insert Activ Post Image*/}
       <HeroImage
-        style={{ backgroundImage: 'url(https://img.freepik.com/premium-photo/plate-food-with-lean-proteins-whole-grains-colorful-vegetables_140916-10.jpg?w=1480)' }}
+        style={{ backgroundImage: `url(${activHeroImg})` }}
       >
         <Container>
           <Typography variant="h3" align="center" style={{ color: 'white', paddingTop: '150px' }}>
-            Fuel your Life
+            ActivCare
           </Typography>
         </Container>
       </HeroImage>
+{/*End Hero*/}
 
+{/*What We Do - Why*/}
       <Section>
         <Container>
           <Typography variant="h4" align="center" gutterBottom>
@@ -98,6 +104,12 @@ const Fuel = () => {
         </Container>
       </Section>
 
+{/*How it Works?*/}
+
+
+{/*Insert Survey of Applications used - integrate with back end here*/}
+
+{/*Footer*/}
       <Footer>
         <Container>
           <Typography variant="body1" align="center">
@@ -105,7 +117,7 @@ const Fuel = () => {
           </Typography>
         </Container>
       </Footer>
-    </div>
+  </div>
   );
 };
 
