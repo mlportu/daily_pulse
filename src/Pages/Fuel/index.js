@@ -1,7 +1,8 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Container, Grid, Paper, Button, Link, Card, CardMedia, CardContent, Box } from '@mui/material';
 import { styled } from '@mui/system';
-import activHeroImg from '../../assets/images/Activ_Post.png';
+import activHeroImg from '../../assets/images/Activ_image_Span.jpg';
+import discoveryImg from '../../assets/images/Activ_Post.png';
 
 // Custom styles using styled from @mui/system
 
@@ -75,43 +76,52 @@ const Fuel = () => {
           <Typography variant="body1" align="center" paragraph>
             Nutrition and Fuel is a core part of a healthy lifestyle and is critical for well-being when paired with exercise, movement, and a intentional recovery. Explore our resources to help you fuel your lifestyle.
           </Typography>
+        </Container>
+      </Section>
+   
 
+{/*How it Works?*/}
+      <Section>
+        <Container>
           <Grid container spacing={4}>
-            {[1, 2, 3, 4].map((index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
-                <StyledCard>
-                  <StyledCardMedia
-                    image={`https://source.unsplash.com/featured/?relaxation,${index}`}
-                    title="Relaxation Image"
-                  />
-                  <CardContentStyled>
-                    <Typography variant="h6">Recovery Activity {index}</Typography>
-                    <Typography variant="body2">
-                      Discover ways to unwind and restore your energy with our recommended activities.
-                    </Typography>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      fullWidth
-                      component={Link}
-                      href="#"
-                      style={{ marginTop: '10px' }}
-                    >
-                      Learn More
-                    </Button>
-                  </CardContentStyled>
-                </StyledCard>
-              </Grid>
-            ))}
+            
           </Grid>
         </Container>
       </Section>
 
-{/*How it Works?*/}
-
-
 {/*Insert Survey of Applications used - integrate with back end here*/}
-
+      <Section>
+        <Container>
+          <Typography variant="h4" align="center" gutterBottom>
+            Tell Us!
+          </Typography>
+          <Typography variant="body1" align="center" paragraph>
+            Everyone's health and wellness journey is unique! We would love to hear what applications and data systems you would like to combine with Activ.
+          </Typography>
+          <StyledCard>
+            <StyledCardMedia
+               style={{ backgroundImage: `url(${discoveryImg})` }}
+              title="Relaxation Image"
+            />
+            <CardContentStyled>
+              <Typography variant="h6">Add your favorite apps!</Typography>
+              <Typography variant="body2">
+                Discover ways to unwind and restore your energy with our recommended activities.
+              </Typography>
+              <Button
+                variant="contained"
+                color="primary"
+                fullWidth
+                component={Link}
+                href="#"
+                style={{ marginTop: '10px' }}
+              >
+                Learn More
+              </Button>
+            </CardContentStyled>
+          </StyledCard>
+        </Container>
+      </Section>
 {/*Footer*/}
       <Footer>
         <Container>
