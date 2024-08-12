@@ -3,12 +3,15 @@ import { AppBar, Toolbar, Typography, Container, Grid, Paper, Button, Link, Card
 import { styled } from '@mui/system';
 import activHeroImg from '../../assets/images/Activ_image_Span.jpg';
 import discoveryImg from '../../assets/images/Activ_Post.png';
+import SpeedSharpIcon from '@mui/icons-material/SpeedSharp';
+import DirectionsRunTwoToneIcon from '@mui/icons-material/DirectionsRunTwoTone';
+import SyncTwoToneIcon from '@mui/icons-material/SyncTwoTone';
 
 // Custom styles using styled from @mui/system
 
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  marginBottom: theme.spacing(4),
+  //marginBottom: theme.spacing(4),
   backgroundColor: '#68E6DF', // Earthy green tone
 }));
 
@@ -20,11 +23,19 @@ const HeroImage = styled('div')({
 
 const Section = styled('div')(({ theme }) => ({
   padding: theme.spacing(4, 0),
-  backgroundColor: '#E3F2FD', // Light blue sky tone
+  backgroundColor: '#000000', // Black
+  color:'#FFFFFF'//White
 }));
 
 const StyledCard = styled(Card)(({ theme }) => ({
-  maxWidth: 345,
+  maxWidth: 700,
+  margin: 'auto',
+  marginTop: theme.spacing(4),
+  color: '#000000',//Black
+}));
+
+const AddAppCard = styled(Card)(({ theme }) => ({
+  maxWidth: 700,
   margin: 'auto',
 }));
 
@@ -37,10 +48,9 @@ const CardContentStyled = styled(CardContent)(({ theme }) => ({
 }));
 
 const Footer = styled('footer')(({ theme }) => ({
-  marginTop: theme.spacing(4),
+  //marginTop: theme.spacing(4),
   padding: theme.spacing(2),
-  backgroundColor: '#25BCD5', // Earthy green tone
-  color: 'white',
+  backgroundColor: '#25BCD5', // Electric Blue
 }));
 
 const Fuel = () => {
@@ -61,7 +71,7 @@ const Fuel = () => {
             ActivCare
           </Typography>
           <Typography variant="h4" align="left" style={{ color: 'white', paddingTop: '50px' }}>
-            Aggregate your health and wellness information into a single location to promote an intentionl and active approach to your being your best self
+            Aggregate your health and wellness information into a single location to promote an intentionl and active approach to being your best self
           </Typography>
         </Container>
       </HeroImage>
@@ -83,9 +93,33 @@ const Fuel = () => {
 {/*How it Works?*/}
       <Section>
         <Container>
-          <Grid container spacing={4}>
-            
-          </Grid>
+        <StyledCard>
+            <Paper style={{ padding: 20 }} align="center"> 
+              <DirectionsRunTwoToneIcon/>
+                Move
+            </Paper>
+            <Typography variant="h4" align="left" style={{ color: 'black'}}>
+                Aggregate your health and wellness information into a single location to promote an intentionl and active approach to being your best self
+            </Typography>
+        </StyledCard>
+        <StyledCard>
+            <Paper style={{ padding: 20 }} align ="center"> 
+                <SyncTwoToneIcon/>
+                Fuel
+            </Paper>
+            <Typography variant="h4" align="left" style={{ color: 'black'}}>
+                Aggregate your health and wellness information into a single location to promote an intentionl and active approach to being your best self
+            </Typography>
+        </StyledCard>
+        <StyledCard>
+            <Paper style={{ padding: 20 }} align="center"> 
+                <SpeedSharpIcon/>
+                Recover
+            </Paper>
+            <Typography variant="h4" align="left" style={{ color: 'black'}}>
+                Aggregate your health and wellness information into a single location to promote an intentionl and active approach to being your best self
+            </Typography>
+        </StyledCard>
         </Container>
       </Section>
 
@@ -98,16 +132,13 @@ const Fuel = () => {
           <Typography variant="body1" align="center" paragraph>
             Everyone's health and wellness journey is unique! We would love to hear what applications and data systems you would like to combine with Activ.
           </Typography>
-          <StyledCard>
+          <AddAppCard>
             <StyledCardMedia
                style={{ backgroundImage: `url(${discoveryImg})` }}
               title="Relaxation Image"
             />
             <CardContentStyled>
-              <Typography variant="h6">Add your favorite apps!</Typography>
-              <Typography variant="body2">
-                Discover ways to unwind and restore your energy with our recommended activities.
-              </Typography>
+              <Typography variant="h6"></Typography>
               <Button
                 variant="contained"
                 color="primary"
@@ -116,10 +147,10 @@ const Fuel = () => {
                 href="#"
                 style={{ marginTop: '10px' }}
               >
-                Learn More
+                Add your favorite apps!
               </Button>
             </CardContentStyled>
-          </StyledCard>
+          </AddAppCard>
         </Container>
       </Section>
 {/*Footer*/}
